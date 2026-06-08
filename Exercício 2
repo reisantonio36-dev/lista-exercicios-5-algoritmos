@@ -1,0 +1,25 @@
+# Exercício 2 - Contagem de números por intervalo
+cont_0_25 = 0
+cont_26_50 = 0
+cont_51_75 = 0
+cont_76_100 = 0
+
+print("Digite números positivos (número negativo para encerrar):")
+while True:
+    num = float(input("Número: "))
+    if num < 0:
+        break
+    if 0 <= num <= 25:
+        cont_0_25 += 1
+    elif 26 <= num <= 50:
+        cont_26_50 += 1
+    elif 51 <= num <= 75:
+        cont_51_75 += 1
+    elif 76 <= num <= 100:
+        cont_76_100 += 1
+
+print("\nResultado:")
+print(f"[0-25]: {cont_0_25} números")
+print(f"[26-50]: {cont_26_50} números")
+print(f"[51-75]: {cont_51_75} números")
+print(f"[76-100]: {cont_76_100} números")
