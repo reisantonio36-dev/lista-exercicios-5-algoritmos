@@ -1,0 +1,18 @@
+# Exercício 15 - Maior e menor valor da matriz
+linhas = int(input("Quantidade de linhas: "))
+colunas = int(input("Quantidade de colunas: "))
+matriz = []
+
+for i in range(linhas):
+    linha = []
+    for j in range(colunas):
+        linha.append(float(input(f"Elemento [{i+1},{j+1}]: ")))
+    matriz.append(linha)
+
+todos_elementos = [valor for linha in matriz for valor in linha]
+maior = max(todos_elementos)
+menor = min(todos_elementos)
+
+print(f"Maior elemento: {maior}")
+print(f"Menor elemento: {menor}")
+
