@@ -1,0 +1,21 @@
+# Exercício 6 - Competição de saltos
+while True:
+    nome = input("\nNome do atleta (vazio para encerrar): ").strip()
+    if not nome:
+        break
+    saltos = []
+    for i in range(5):
+        distancia = float(input(f"{i+1}º salto (m): "))
+        saltos.append(distancia)
+    
+    melhor = max(saltos)
+    pior = min(saltos)
+    saltos_restantes = [s for s in saltos if s != melhor and s != pior]
+    media = sum(saltos_restantes) / len(saltos_restantes)
+
+    print(f"\nAtleta: {nome}")
+    print(f"Melhor salto: {melhor} m")
+    print(f"Pior salto: {pior} m")
+    print(f"Média dos demais: {media:.2f} m")
+    print(f"Resultado final: {nome} - {media:.2f} m")
+
