@@ -1,0 +1,20 @@
+# Exercício 1 - Cálculo de dívida com juros e parcelas
+valor_divida = float(input("Digite o valor da dívida: R$ "))
+
+tabela = [
+    {"parcelas": 1, "juros": 0},
+    {"parcelas": 3, "juros": 10},
+    {"parcelas": 6, "juros": 15},
+    {"parcelas": 9, "juros": 20},
+    {"parcelas": 12, "juros": 25}
+]
+
+print("\nValor da Dívida | Valor dos Juros | Quantidade de Parcelas | Valor da Parcela")
+print("-" * 75)
+
+for item in tabela:
+    valor_juros = valor_divida * (item["juros"] / 100)
+    valor_total = valor_divida + valor_juros
+    valor_parcela = valor_total / item["parcelas"]
+    print(f"R$ {valor_total:13.2f} | R$ {valor_juros:14.2f} | {item['parcelas']:21d} | R$ {valor_parcela:15.2f}")
+
