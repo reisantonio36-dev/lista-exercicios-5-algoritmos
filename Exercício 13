@@ -1,0 +1,16 @@
+# Exercício 13 - Contar ocorrência de elemento
+linhas = int(input("Quantidade de linhas: "))
+colunas = int(input("Quantidade de colunas: "))
+matriz = []
+
+for i in range(linhas):
+    linha = []
+    for j in range(colunas):
+        linha.append(float(input(f"Elemento [{i+1},{j+1}]: ")))
+    matriz.append(linha)
+
+busca = float(input("Digite o valor a ser procurado: "))
+contagem = sum(linha.count(busca) for linha in matriz)
+
+print(f"O valor {busca} aparece {contagem} vez(es) na matriz.")
+
