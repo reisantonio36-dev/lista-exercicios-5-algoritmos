@@ -1,0 +1,15 @@
+# Exercício 16 - Matriz com produto de índices
+linhas = int(input("Quantidade de linhas: "))
+colunas = int(input("Quantidade de colunas: "))
+matriz = []
+
+for i in range(linhas):
+    linha = []
+    for j in range(colunas):
+        linha.append(i * j)
+    matriz.append(linha)
+
+print("\nMatriz gerada:")
+for linha in matriz:
+    print(linha)
+
