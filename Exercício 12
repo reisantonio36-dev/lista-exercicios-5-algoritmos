@@ -1,0 +1,17 @@
+# Exercício 12 - Soma das diagonais de matriz quadrada
+ordem = int(input("Digite a ordem da matriz: "))
+matriz = []
+
+for i in range(ordem):
+    linha = []
+    for j in range(ordem):
+        valor = float(input(f"Elemento [{i+1},{j+1}]: "))
+        linha.append(valor)
+    matriz.append(linha)
+
+soma_principal = sum(matriz[i][i] for i in range(ordem))
+soma_secundaria = sum(matriz[i][ordem - 1 - i] for i in range(ordem))
+
+print(f"Soma da diagonal principal: {soma_principal:.2f}")
+print(f"Soma da diagonal secundária: {soma_secundaria:.2f}")
+
