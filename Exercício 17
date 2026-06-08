@@ -1,0 +1,22 @@
+# Exercício 17 - Verificar matriz quadrada
+linhas = int(input("Quantidade de linhas: "))
+matriz = []
+tamanho_linhas = None
+
+for i in range(linhas):
+    colunas = int(input(f"Quantidade de colunas da linha {i+1}: "))
+    linha = []
+    for j in range(colunas):
+        linha.append(float(input(f"Elemento [{i+1},{j+1}]: ")))
+    matriz.append(linha)
+    if tamanho_linhas is None:
+        tamanho_linhas = colunas
+    if colunas != tamanho_linhas:
+        tamanho_linhas = -1
+
+todas_linhas_mesmo_tamanho = tamanho_linhas != -1
+eh_quadrada = todas_linhas_mesmo_tamanho and (linhas == tamanho_linhas)
+
+print(f"Todas as linhas têm o mesmo número de colunas: {todas_linhas_mesmo_tamanho}")
+print(f"É matriz quadrada: {eh_quadrada}")
+
