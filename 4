@@ -1,0 +1,32 @@
+# Exercício 4 - Apuração de eleição
+votos = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+candidatos = {1: "José", 2: "João", 3: "Maria", 4: "Ana"}
+
+print("Digite o código do voto (1 a 6) ou 0 para finalizar:")
+print("1-José | 2-João | 3-Maria | 4-Ana | 5-Nulo | 6-Branco")
+
+while True:
+    voto = int(input("Voto: "))
+    if voto == 0:
+        break
+    if 1 <= voto <= 6:
+        votos[voto] += 1
+    else:
+        print("Código inválido!")
+
+total_votos = sum(votos.values())
+
+print("\n=== RESULTADO ===")
+for cod, nome in candidatos.items():
+    print(f"{nome}: {votos[cod]} votos")
+print(f"Votos nulos: {votos[5]}")
+print(f"Votos em branco: {votos[6]}")
+
+if total_votos > 0:
+    perc_nulos = (votos[5] / total_votos) * 100
+    perc_brancos = (votos[6] / total_votos) * 100
+    print(f"Percentual de votos nulos: {perc_nulos:.2f}%")
+    print(f"Percentual de votos em branco: {perc_brancos:.2f}%")
+else:
+    print("Nenhum voto registrado.")
+
