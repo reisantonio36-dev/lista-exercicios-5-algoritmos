@@ -1,0 +1,8 @@
+# Exercício 8 - Inverter número
+numero = input("Digite um número inteiro positivo: ")
+if numero.isdigit():
+    numero_invertido = numero[::-1]
+    print(f"Número invertido: {numero_invertido}")
+else:
+    print("Entrada inválida! Digite apenas números.")
+
