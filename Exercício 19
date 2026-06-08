@@ -1,0 +1,16 @@
+# Exercício 19 - Contar vogais e consoantes
+texto = input("Digite uma frase ou palavra: ").upper()
+vogais = "AEIOU"
+cont_vogais = 0
+cont_consoantes = 0
+
+for caractere in texto:
+    if caractere.isalpha():
+        if caractere in vogais:
+            cont_vogais += 1
+        else:
+            cont_consoantes += 1
+
+print(f"Quantidade de vogais: {cont_vogais}")
+print(f"Quantidade de consoantes: {cont_consoantes}")
+
