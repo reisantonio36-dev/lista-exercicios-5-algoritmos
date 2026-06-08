@@ -1,0 +1,17 @@
+# Exercício 18 - Inverter ordem das linhas
+linhas = int(input("Quantidade de linhas: "))
+colunas = int(input("Quantidade de colunas: "))
+matriz = []
+
+for i in range(linhas):
+    linha = []
+    for j in range(colunas):
+        linha.append(float(input(f"Elemento [{i+1},{j+1}]: ")))
+    matriz.append(linha)
+
+matriz_invertida = matriz[::-1]
+
+print("\nMatriz com linhas invertidas:")
+for linha in matriz_invertida:
+    print(linha)
+
